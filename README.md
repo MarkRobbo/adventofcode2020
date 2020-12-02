@@ -1,5 +1,7 @@
 # Advent of Code 2020
 
+![Build and Test](https://github.com/MarkRobbo/adventofcode2020/workflows/Java%20CI%20with%20Maven/badge.svg)
+
 This is a repository to keep the code written as part of my Advent of Code 2020 attempts with Kotlin.
 
 | Task                                        | Solution                             |
