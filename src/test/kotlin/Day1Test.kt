@@ -1,4 +1,4 @@
-package me.markrobbo.day1
+package me.markrobbo
 
 import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
@@ -6,7 +6,7 @@ import java.nio.file.Files
 import java.nio.file.Paths
 import kotlin.test.assertEquals
 
-class Day01Test {
+class Day1Test {
 
     val example = listOf(1721, 979, 366, 299, 675, 1456)
     val input = Files.readAllLines(Paths.get("src/main/resources/day1/day1.csv"))

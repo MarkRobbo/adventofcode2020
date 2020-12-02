@@ -1,4 +1,4 @@
-package me.markrobbo.day1
+package me.markrobbo
 
 class Day1 {
 
