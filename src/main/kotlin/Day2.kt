@@ -3,11 +3,10 @@ package me.markrobbo
 private data class PasswordWithPolicy(val low: Int, val high: Int, val char: Char, val password: String) {
 
     fun passwordIsValidDownTheRoad(): Boolean {
-        val charCounts = password.asSequence()
-            .groupingBy { it }
-            .eachCount()
-        if (char !in charCounts) return false
-        return charCounts[char] in low..high
+        val charCount = password.asSequence()
+            .filter { it == char }
+            .count()
+        return charCount in low..high
     }
 
     fun passwordIsValid(): Boolean {
@@ -18,13 +17,9 @@ private data class PasswordWithPolicy(val low: Int, val high: Int, val char: Cha
 
     companion object Factory {
         fun fromString(input: String): PasswordWithPolicy {
-            val matches = """(?<low>\d+)-(?<high>\d+) (?<char>\w): (?<password>\w+)""".toRegex()
-                .matchEntire(input)!!.groups
-            val low = matches["low"]!!.value.toInt()
-            val high = matches["high"]!!.value.toInt()
-            val char = matches["char"]!!.value.toCharArray().first()
-            val password = matches["password"]!!.value
-            return PasswordWithPolicy(low, high, char, password)
+            return """(\d+)-(\d+) (\w): (\w+)""".toRegex()
+                .matchEntire(input)!!.destructured
+                .let { (low, high, char, password) -> PasswordWithPolicy(low.toInt(), high.toInt(), char.first(), password) }
         }
     }
 }
