@@ -37,5 +37,4 @@ class Day2 {
             .map { it.passwordIsValid() }
             .count { it }
     }
-
 }
