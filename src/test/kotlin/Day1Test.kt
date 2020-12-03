@@ -10,7 +10,7 @@ class Day1Test {
 
     val example = listOf(1721, 979, 366, 299, 675, 1456)
     val input = Files.readAllLines(Paths.get("src/main/resources/day1/day1.csv"))
-            .map { it.toInt() }
+        .map { it.toInt() }
 
     @Nested
     inner class Part1 {
@@ -32,13 +32,13 @@ class Day1Test {
         @Test
         fun `Matches example`() {
             val answer = Day1().solvePart2(example)
-            assertEquals(241861950, answer);
+            assertEquals(241861950, answer)
         }
 
         @Test
         fun `Final answer`() {
             val answer = Day1().solvePart2(input)
-            assertEquals(259521570, answer);
+            assertEquals(259521570, answer)
         }
     }
 }
