@@ -37,7 +37,6 @@ class Day4Test {
         @Test
         fun `Final answer`() {
             val answer = Day4().solvePart2(input)
-            println(answer)
             assertEquals(158, answer)
         }
     }
