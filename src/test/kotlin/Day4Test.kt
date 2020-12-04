@@ -8,8 +8,8 @@ import kotlin.test.assertEquals
 
 class Day4Test {
 
-    val example = Files.readString(Paths.get("src/main/resources/day4/day4_example.txt"))
-    val input = Files.readString(Paths.get("src/main/resources/day4/day4.txt"))
+    val example = String(Files.readAllBytes(Paths.get("src/main/resources/day4/day4_example.txt")))
+    val input = String(Files.readAllBytes(Paths.get("src/main/resources/day4/day4.txt")))
 
     @Nested
     inner class Part1 {
