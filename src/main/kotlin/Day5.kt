@@ -14,8 +14,8 @@ class Day5 {
     }
 
     private fun getSeatId(seatSpec: String): Int {
-        return seatSpec.fold(0) { acc, char ->
-            acc * 2 + if (char == 'B' || char == 'R') 1 else 0
+        return seatSpec.fold(0) { seatId, char ->
+            seatId * 2 + if (char == 'B' || char == 'R') 1 else 0
         }
     }
 }
