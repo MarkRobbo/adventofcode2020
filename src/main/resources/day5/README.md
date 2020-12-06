@@ -1,6 +1,6 @@
-## Binary Boarding
+# Binary Boarding
 
-# Part 1
+## Part 1
 You board your plane only to discover a new problem: you dropped your boarding pass! You aren't sure which seat is yours, and all of the flight attendants are busy with the flood of people that suddenly made it through passport control.
 
 You write a quick program to use your phone's camera to scan all of the nearby boarding passes (your puzzle input); perhaps you can find your seat through process of elimination.
@@ -39,7 +39,7 @@ Here are some other boarding passes:
 * BBFFBBFRLL: row 102, column 4, seat ID 820.
 As a sanity check, look through your list of boarding passes. *What is the highest seat ID on a boarding pass?*
 
-# Part 2
+## Part 2
 
 *Ding!* The "fasten seat belt" signs have turned on. Time to find your seat.
 
