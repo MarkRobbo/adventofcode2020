@@ -4,7 +4,7 @@ class Day6 {
 
     fun solvePart1(input: String): Int {
         return input.split("\n\n")
-            .map(::getUniqueLetters)
+            .map(::uniqueLetters)
             .sumBy { it.size }
     }
 
@@ -12,11 +12,11 @@ class Day6 {
         return input.split("\n\n")
             .sumBy { groupAnswers ->
                 groupAnswers.split("\n")
-                    .map(::getUniqueLetters)
+                    .map(::uniqueLetters)
                     .reduce(Set<Char>::intersect)
                     .size
             }
     }
 
-    private fun getUniqueLetters(str: String) = str.toCharArray().filter(Char::isLetter).toSet()
+    private fun uniqueLetters(str: String) = str.filter(Char::isLetter).toSet()
 }
