@@ -13,7 +13,7 @@ class Day7 {
     }
 
     private fun readBagInfo(input: List<String>): Map<String, Map<String, Int>> {
-       return input.map { line ->
+        return input.map { line ->
             line.split(" bags contain ")
                 .let { (bag, containing) ->
                     bag to containing.split(", ").mapNotNull {
