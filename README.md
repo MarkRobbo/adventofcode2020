@@ -14,3 +14,4 @@ This is a repository to keep the code written as part of my Advent of Code 2020 
 | [Day 6](https://adventofcode.com/2020/day/6)  | [Solution](src/main/kotlin/Day6.kt)  |
 | [Day 7](https://adventofcode.com/2020/day/7)  | [Solution](src/main/kotlin/Day7.kt)  |
 | [Day 8](https://adventofcode.com/2020/day/8)  | [Solution](src/main/kotlin/Day8.kt)  |
+| [Day 9](https://adventofcode.com/2020/day/9)  | [Solution](src/main/kotlin/Day9.kt)  |
