@@ -2,7 +2,7 @@ package me.markrobbo
 
 class Day13 {
 
-    fun solvePart1(input: List<String>): Int  {
+    fun solvePart1(input: List<String>): Int {
         val arrival = input[0].toInt()
         return input[1].split(",")
             .filterNot { it == "x" }
@@ -13,7 +13,7 @@ class Day13 {
 
     private fun waitTime(arrival: Int, bus: Int) = bus - arrival % bus
 
-    fun solvePart2(input: List<String>): Long  {
+    fun solvePart2(input: List<String>): Long {
         var time = 0L
         var lowestCommonMultiple = 1L
         input[1].split(",").withIndex()

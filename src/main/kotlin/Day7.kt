@@ -27,9 +27,11 @@ class Day7 {
     }
 
     private fun countBagsOfColour(colour: String, bags: Map<String, Map<String, Int>>): Int {
-        return 1 + (bags[colour]?.entries?.sumBy { bag ->
-            bag.value * countBagsOfColour(bag.key, bags)
-        } ?: 0)
+        return 1 + (
+            bags[colour]?.entries?.sumBy { bag ->
+                bag.value * countBagsOfColour(bag.key, bags)
+            } ?: 0
+            )
     }
 
     private fun containsShinyGold(colour: String, bags: Map<String, Map<String, Int>>): Boolean {

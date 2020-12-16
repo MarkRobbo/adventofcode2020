@@ -13,7 +13,9 @@ class Day10 {
     fun solvePart2(input: List<String>): Long? {
         return getAdapters(input.map { it.toInt() })
             .drop(1)
-            .fold(mapOf(0 to 1L), { waysToConnect, adapter ->
+            .fold(
+                mapOf(0 to 1L),
+                { waysToConnect, adapter ->
                     waysToConnect.plus(
                         adapter to (1..3).map { waysToConnect[adapter - it] ?: 0 }.sum()
                     )

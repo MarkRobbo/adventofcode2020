@@ -9,7 +9,7 @@ class Day12 {
         abstract fun navigate(command: Char, amount: Int)
     }
 
-    class DirectNavigatedShip: Ship() {
+    class DirectNavigatedShip : Ship() {
         override fun navigate(command: Char, amount: Int) {
             when (command) {
                 'N' -> { y -= amount }
@@ -30,7 +30,7 @@ class Day12 {
         }
     }
 
-    class WaypointNavigatedShip: Ship() {
+    class WaypointNavigatedShip : Ship() {
         var waypointX: Int = 10
         var waypointY: Int = -1
 
@@ -61,13 +61,13 @@ class Day12 {
         }
     }
 
-    fun solvePart1(input: List<String>): Int  {
+    fun solvePart1(input: List<String>): Int {
         val ship = DirectNavigatedShip()
         input.forEach { ship.navigate(it[0], it.substring(1).toInt()) }
         return ship.manhattanDistanceFromOrigin()
     }
 
-    fun solvePart2(input: List<String>): Int  {
+    fun solvePart2(input: List<String>): Int {
         val ship = WaypointNavigatedShip()
         input.forEach { ship.navigate(it[0], it.substring(1).toInt()) }
         return ship.manhattanDistanceFromOrigin()
